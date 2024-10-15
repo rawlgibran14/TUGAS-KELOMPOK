@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pion Laundry - Layanan</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        .service-icon {
+            font-size: 3.5rem;
+        }
+
+        .service-card {
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(122, 11, 192, 0.2);
+        }
+
+        #services .btn {
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #services .btn:hover {
+            background-color: #7A0BC0;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Form Styles */
+        #orderForm {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        #orderForm .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container left mt-5">
+        <a href="index.html" class="btn btn-back">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
+    </div>
+    <div class="container mt-5" id="services">
+        <h2 class="text-center font-weight-bold mb-5" style="color: #7A0BC0;">Jasa Kami</h2>
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow service-card">
+                    <div class="card-body">
+                        <div class="service-icon display-3 mb-3" style="color: #7A0BC0;">🧺</div>
+                        <h3 class="card-title font-weight-bold">Cuci Kering</h3>
+                        <p class="card-text">Harga: Rp5,000/kg</p>
+                        <a href="#orderForm" class="btn btn-outline-primary rounded-pill">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow service-card">
+                    <div class="card-body">
+                        <div class="service-icon display-3 mb-3" style="color: #7A0BC0;">🧼</div>
+                        <h3 class="card-title font-weight-bold">Cuci Setrika</h3>
+                        <p class="card-text">Harga: Rp10,000/kg</p>
+                        <a href="#orderForm" class="btn btn-outline-primary rounded-pill">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow service-card">
+                    <div class="card-body">
+                        <div class="service-icon display-3 mb-3" style="color: #7A0BC0;">⚡</div>
+                        <h3 class="card-title font-weight-bold">Layanan Ekspres</h3>
+                        <p class="card-text">Harga: Rp20,000/kg</p>
+                        <a href="#orderForm" class="btn btn-outline-primary rounded-pill">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Pesan Sekarang</h3>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap Anda">
+            </div>
+            <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor telepon Anda">
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Pilih Layanan</label>
+                <select class="form-control" id="serviceType">
+                    <option value="cuci-kering">Cuci Kering - Rp5,000/kg</option>
+                    <option value="cuci-setrika">Cuci Setrika - Rp10,000/kg</option>
+                    <option value="layanan-ekspres">Layanan Ekspres - Rp20,000/kg</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="weight">Berat Pakaian (kg)</label>
+                <input type="number" class="form-control" id="weight" placeholder="Masukkan berat pakaian Anda dalam kg">
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Penjemputan</label>
+                <input type="text" class="form-control" id="address" placeholder="Masukkan alamat lengkap penjemputan">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Kirim Pesanan</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
